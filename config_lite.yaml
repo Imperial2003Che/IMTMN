@@ -1,0 +1,53 @@
+data:
+  root_dir: './datasets'
+  datasets: ['University-1652', 'SUES-200']
+  image_size: 256
+  batch_size: 1  # ← 核心
+  num_workers: 0
+
+model:
+  arch: 'imtmn'
+  d_model: 96        # ← 减小
+  num_heads: 4       # ← 减小
+  num_layers: 2      # ← 减小
+  topk_attn: 32
+  use_sparse: true
+  transformer_size: 16  # ← 减小（16×16=256 tokens）
+  topk_match: 50
+  sinkhorn_iters: 10
+  ffn_dim: 256
+  dropout: 0.1
+  pretrained_backbone: true
+
+training:
+  epochs: 3      # ← 试跑
+  lr: 0.0001
+  weight_decay: 0.0001
+  scheduler: 'cosine'
+  use_amp: false
+
+loss:
+  match_weight: 1.0
+  geo_weight: 0.5
+  retrieval_weight: 0.5
+  temperature: 0.07
+
+checkpoint:
+  save_dir: './checkpoints'
+  save_interval: 5
+  save_best: true
+
+output:
+  output_dir: './outputs'
+
+evaluation:
+  val_interval: 1
+
+logging:
+  log_dir: './logs'
+  log_interval: 5
+  tensorboard: false
+
+misc:
+  device: 'cpu'
+  seed: 42

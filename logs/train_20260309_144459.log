@@ -1,0 +1,154 @@
+2026-03-09 14:44:59,262 - INFO - TensorBoard 日志目录: ./logs/tb_20260309_144459
+2026-03-09 14:44:59,262 - INFO - 日志文件: ./logs/train_20260309_144459.log
+2026-03-09 14:45:01,948 - INFO - Epoch 1 - Train Loss: 0.0763 - LR: 0.000999
+2026-03-09 14:45:01,961 - WARNING - Epoch 1 - No valid validation batches
+2026-03-09 14:45:02,016 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_1.pth
+2026-03-09 14:45:04,292 - INFO - Epoch 2 - Train Loss: 0.0023 - LR: 0.000996
+2026-03-09 14:45:04,302 - WARNING - Epoch 2 - No valid validation batches
+2026-03-09 14:45:04,347 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_2.pth
+2026-03-09 14:45:06,512 - INFO - Epoch 3 - Train Loss: 0.0011 - LR: 0.000991
+2026-03-09 14:45:06,523 - WARNING - Epoch 3 - No valid validation batches
+2026-03-09 14:45:06,577 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_3.pth
+2026-03-09 14:45:08,708 - INFO - Epoch 4 - Train Loss: 0.0007 - LR: 0.000984
+2026-03-09 14:45:08,718 - WARNING - Epoch 4 - No valid validation batches
+2026-03-09 14:45:08,764 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_4.pth
+2026-03-09 14:45:10,875 - INFO - Epoch 5 - Train Loss: 0.0007 - LR: 0.000976
+2026-03-09 14:45:10,884 - WARNING - Epoch 5 - No valid validation batches
+2026-03-09 14:45:10,930 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_5.pth
+2026-03-09 14:45:13,041 - INFO - Epoch 6 - Train Loss: 0.0006 - LR: 0.000965
+2026-03-09 14:45:13,051 - WARNING - Epoch 6 - No valid validation batches
+2026-03-09 14:45:13,098 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_6.pth
+2026-03-09 14:45:15,222 - INFO - Epoch 7 - Train Loss: 0.0005 - LR: 0.000952
+2026-03-09 14:45:15,232 - WARNING - Epoch 7 - No valid validation batches
+2026-03-09 14:45:15,278 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_7.pth
+2026-03-09 14:45:17,407 - INFO - Epoch 8 - Train Loss: 0.0005 - LR: 0.000938
+2026-03-09 14:45:17,417 - WARNING - Epoch 8 - No valid validation batches
+2026-03-09 14:45:17,462 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_8.pth
+2026-03-09 14:45:19,582 - INFO - Epoch 9 - Train Loss: 0.0005 - LR: 0.000922
+2026-03-09 14:45:19,592 - WARNING - Epoch 9 - No valid validation batches
+2026-03-09 14:45:19,637 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_9.pth
+2026-03-09 14:45:21,748 - INFO - Epoch 10 - Train Loss: 0.0005 - LR: 0.000905
+2026-03-09 14:45:21,758 - WARNING - Epoch 10 - No valid validation batches
+2026-03-09 14:45:21,803 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_10.pth
+2026-03-09 14:45:24,019 - INFO - Epoch 11 - Train Loss: 0.0004 - LR: 0.000885
+2026-03-09 14:45:24,030 - WARNING - Epoch 11 - No valid validation batches
+2026-03-09 14:45:24,077 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_11.pth
+2026-03-09 14:45:26,486 - INFO - Epoch 12 - Train Loss: 0.0004 - LR: 0.000865
+2026-03-09 14:45:26,496 - WARNING - Epoch 12 - No valid validation batches
+2026-03-09 14:45:26,546 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_12.pth
+2026-03-09 14:45:28,781 - INFO - Epoch 13 - Train Loss: 0.0005 - LR: 0.000842
+2026-03-09 14:45:28,791 - WARNING - Epoch 13 - No valid validation batches
+2026-03-09 14:45:28,837 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_13.pth
+2026-03-09 14:45:30,951 - INFO - Epoch 14 - Train Loss: 0.0004 - LR: 0.000819
+2026-03-09 14:45:30,961 - WARNING - Epoch 14 - No valid validation batches
+2026-03-09 14:45:31,006 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_14.pth
+2026-03-09 14:45:33,141 - INFO - Epoch 15 - Train Loss: 0.0003 - LR: 0.000794
+2026-03-09 14:45:33,151 - WARNING - Epoch 15 - No valid validation batches
+2026-03-09 14:45:33,201 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_15.pth
+2026-03-09 14:45:35,344 - INFO - Epoch 16 - Train Loss: 0.0004 - LR: 0.000768
+2026-03-09 14:45:35,354 - WARNING - Epoch 16 - No valid validation batches
+2026-03-09 14:45:35,398 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_16.pth
+2026-03-09 14:45:37,519 - INFO - Epoch 17 - Train Loss: 0.0004 - LR: 0.000741
+2026-03-09 14:45:37,529 - WARNING - Epoch 17 - No valid validation batches
+2026-03-09 14:45:37,574 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_17.pth
+2026-03-09 14:45:39,691 - INFO - Epoch 18 - Train Loss: 0.0003 - LR: 0.000713
+2026-03-09 14:45:39,701 - WARNING - Epoch 18 - No valid validation batches
+2026-03-09 14:45:39,747 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_18.pth
+2026-03-09 14:45:41,869 - INFO - Epoch 19 - Train Loss: 0.0004 - LR: 0.000684
+2026-03-09 14:45:41,879 - WARNING - Epoch 19 - No valid validation batches
+2026-03-09 14:45:41,924 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_19.pth
+2026-03-09 14:45:44,057 - INFO - Epoch 20 - Train Loss: 0.0004 - LR: 0.000655
+2026-03-09 14:45:44,068 - WARNING - Epoch 20 - No valid validation batches
+2026-03-09 14:45:44,133 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_20.pth
+2026-03-09 14:45:46,273 - INFO - Epoch 21 - Train Loss: 0.0004 - LR: 0.000625
+2026-03-09 14:45:46,283 - WARNING - Epoch 21 - No valid validation batches
+2026-03-09 14:45:46,330 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_21.pth
+2026-03-09 14:45:48,477 - INFO - Epoch 22 - Train Loss: 0.0003 - LR: 0.000594
+2026-03-09 14:45:48,487 - WARNING - Epoch 22 - No valid validation batches
+2026-03-09 14:45:48,537 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_22.pth
+2026-03-09 14:45:50,795 - INFO - Epoch 23 - Train Loss: 0.0003 - LR: 0.000563
+2026-03-09 14:45:50,806 - WARNING - Epoch 23 - No valid validation batches
+2026-03-09 14:45:50,857 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_23.pth
+2026-03-09 14:45:52,991 - INFO - Epoch 24 - Train Loss: 0.0003 - LR: 0.000532
+2026-03-09 14:45:53,001 - WARNING - Epoch 24 - No valid validation batches
+2026-03-09 14:45:53,046 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_24.pth
+2026-03-09 14:45:55,253 - INFO - Epoch 25 - Train Loss: 0.0003 - LR: 0.000500
+2026-03-09 14:45:55,263 - WARNING - Epoch 25 - No valid validation batches
+2026-03-09 14:45:55,328 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_25.pth
+2026-03-09 14:45:57,454 - INFO - Epoch 26 - Train Loss: 0.0003 - LR: 0.000469
+2026-03-09 14:45:57,464 - WARNING - Epoch 26 - No valid validation batches
+2026-03-09 14:45:57,510 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_26.pth
+2026-03-09 14:45:59,615 - INFO - Epoch 27 - Train Loss: 0.0002 - LR: 0.000438
+2026-03-09 14:45:59,625 - WARNING - Epoch 27 - No valid validation batches
+2026-03-09 14:45:59,679 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_27.pth
+2026-03-09 14:46:01,871 - INFO - Epoch 28 - Train Loss: 0.0002 - LR: 0.000407
+2026-03-09 14:46:01,881 - WARNING - Epoch 28 - No valid validation batches
+2026-03-09 14:46:01,927 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_28.pth
+2026-03-09 14:46:04,113 - INFO - Epoch 29 - Train Loss: 0.0002 - LR: 0.000376
+2026-03-09 14:46:04,123 - WARNING - Epoch 29 - No valid validation batches
+2026-03-09 14:46:04,167 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_29.pth
+2026-03-09 14:46:06,359 - INFO - Epoch 30 - Train Loss: 0.0002 - LR: 0.000346
+2026-03-09 14:46:06,369 - WARNING - Epoch 30 - No valid validation batches
+2026-03-09 14:46:06,419 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_30.pth
+2026-03-09 14:46:08,599 - INFO - Epoch 31 - Train Loss: 0.0002 - LR: 0.000317
+2026-03-09 14:46:08,609 - WARNING - Epoch 31 - No valid validation batches
+2026-03-09 14:46:08,655 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_31.pth
+2026-03-09 14:46:10,841 - INFO - Epoch 32 - Train Loss: 0.0002 - LR: 0.000288
+2026-03-09 14:46:10,851 - WARNING - Epoch 32 - No valid validation batches
+2026-03-09 14:46:10,894 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_32.pth
+2026-03-09 14:46:13,103 - INFO - Epoch 33 - Train Loss: 0.0002 - LR: 0.000260
+2026-03-09 14:46:13,113 - WARNING - Epoch 33 - No valid validation batches
+2026-03-09 14:46:13,158 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_33.pth
+2026-03-09 14:46:15,367 - INFO - Epoch 34 - Train Loss: 0.0002 - LR: 0.000233
+2026-03-09 14:46:15,377 - WARNING - Epoch 34 - No valid validation batches
+2026-03-09 14:46:15,428 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_34.pth
+2026-03-09 14:46:17,543 - INFO - Epoch 35 - Train Loss: 0.0002 - LR: 0.000207
+2026-03-09 14:46:17,553 - WARNING - Epoch 35 - No valid validation batches
+2026-03-09 14:46:17,598 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_35.pth
+2026-03-09 14:46:19,709 - INFO - Epoch 36 - Train Loss: 0.0001 - LR: 0.000182
+2026-03-09 14:46:19,719 - WARNING - Epoch 36 - No valid validation batches
+2026-03-09 14:46:19,764 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_36.pth
+2026-03-09 14:46:21,874 - INFO - Epoch 37 - Train Loss: 0.0001 - LR: 0.000159
+2026-03-09 14:46:21,883 - WARNING - Epoch 37 - No valid validation batches
+2026-03-09 14:46:21,928 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_37.pth
+2026-03-09 14:46:24,036 - INFO - Epoch 38 - Train Loss: 0.0001 - LR: 0.000136
+2026-03-09 14:46:24,046 - WARNING - Epoch 38 - No valid validation batches
+2026-03-09 14:46:24,091 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_38.pth
+2026-03-09 14:46:26,198 - INFO - Epoch 39 - Train Loss: 0.0001 - LR: 0.000116
+2026-03-09 14:46:26,208 - WARNING - Epoch 39 - No valid validation batches
+2026-03-09 14:46:26,255 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_39.pth
+2026-03-09 14:46:28,364 - INFO - Epoch 40 - Train Loss: 0.0001 - LR: 0.000096
+2026-03-09 14:46:28,374 - WARNING - Epoch 40 - No valid validation batches
+2026-03-09 14:46:28,425 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_40.pth
+2026-03-09 14:46:30,544 - INFO - Epoch 41 - Train Loss: 0.0001 - LR: 0.000079
+2026-03-09 14:46:30,554 - WARNING - Epoch 41 - No valid validation batches
+2026-03-09 14:46:30,598 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_41.pth
+2026-03-09 14:46:32,713 - INFO - Epoch 42 - Train Loss: 0.0001 - LR: 0.000063
+2026-03-09 14:46:32,723 - WARNING - Epoch 42 - No valid validation batches
+2026-03-09 14:46:32,768 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_42.pth
+2026-03-09 14:46:34,875 - INFO - Epoch 43 - Train Loss: 0.0001 - LR: 0.000049
+2026-03-09 14:46:34,885 - WARNING - Epoch 43 - No valid validation batches
+2026-03-09 14:46:34,930 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_43.pth
+2026-03-09 14:46:37,041 - INFO - Epoch 44 - Train Loss: 0.0001 - LR: 0.000036
+2026-03-09 14:46:37,050 - WARNING - Epoch 44 - No valid validation batches
+2026-03-09 14:46:37,099 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_44.pth
+2026-03-09 14:46:39,206 - INFO - Epoch 45 - Train Loss: 0.0001 - LR: 0.000025
+2026-03-09 14:46:39,216 - WARNING - Epoch 45 - No valid validation batches
+2026-03-09 14:46:39,260 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_45.pth
+2026-03-09 14:46:41,378 - INFO - Epoch 46 - Train Loss: 0.0001 - LR: 0.000017
+2026-03-09 14:46:41,388 - WARNING - Epoch 46 - No valid validation batches
+2026-03-09 14:46:41,435 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_46.pth
+2026-03-09 14:46:43,543 - INFO - Epoch 47 - Train Loss: 0.0001 - LR: 0.000010
+2026-03-09 14:46:43,552 - WARNING - Epoch 47 - No valid validation batches
+2026-03-09 14:46:43,604 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_47.pth
+2026-03-09 14:46:45,710 - INFO - Epoch 48 - Train Loss: 0.0001 - LR: 0.000005
+2026-03-09 14:46:45,719 - WARNING - Epoch 48 - No valid validation batches
+2026-03-09 14:46:45,764 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_48.pth
+2026-03-09 14:46:47,874 - INFO - Epoch 49 - Train Loss: 0.0001 - LR: 0.000002
+2026-03-09 14:46:47,884 - WARNING - Epoch 49 - No valid validation batches
+2026-03-09 14:46:47,929 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_49.pth
+2026-03-09 14:46:50,039 - INFO - Epoch 50 - Train Loss: 0.0001 - LR: 0.000001
+2026-03-09 14:46:50,049 - WARNING - Epoch 50 - No valid validation batches
+2026-03-09 14:46:50,094 - INFO - Saved checkpoint to ./checkpoints/checkpoint_epoch_50.pth
+2026-03-09 14:46:50,094 - INFO - 训练历史已保存到 ./logs/history_20260309_144459.json
+2026-03-09 14:46:50,094 - INFO - Training completed!

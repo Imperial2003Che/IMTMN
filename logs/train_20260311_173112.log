@@ -1,0 +1,6 @@
+2026-03-11 17:31:12,470 - INFO - TensorBoard 日志目录: ./logs/tb_20260311_173112
+2026-03-11 17:31:12,470 - INFO - 日志文件: ./logs/train_20260311_173112.log
+2026-03-11 17:31:12,471 - INFO - IMTMN Model Parameters: 16,241,429 total, 16,241,429 trainable
+2026-03-12 08:41:40,018 - INFO - Epoch 1 - Train Loss: 30.6283 - LR: 0.000100
+2026-03-12 08:41:41,018 - INFO - Epoch 1 - Val Loss: 41.8704
+2026-03-12 08:41:41,506 - INFO - Saved best model to ./checkpoints/best_model.pth

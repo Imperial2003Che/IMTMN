@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.env
+venv/
+
+# Data & large files
+data/
+datasets/
+checkpoints/*.pth
+checkpoints/*.pt
+
+# Logs & outputs (keep structure, ignore content)
+logs/*.json
+logs/*.txt
+outputs/*.png
+outputs/*.jpg
+
+# Jupyter
+.ipynb_checkpoints/
