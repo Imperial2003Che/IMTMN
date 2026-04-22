@@ -1,18 +1,19 @@
+# 轻量配置，用于CPU调试
 data:
   root_dir: './datasets'
   datasets: ['University-1652', 'SUES-200']
   image_size: 256
-  batch_size: 1  # ← 核心
+  batch_size: 1
   num_workers: 0
 
 model:
   arch: 'imtmn'
-  d_model: 96        # ← 减小
-  num_heads: 4       # ← 减小
-  num_layers: 2      # ← 减小
+  d_model: 96
+  num_heads: 4
+  num_layers: 2
   topk_attn: 32
   use_sparse: true
-  transformer_size: 16  # ← 减小（16×16=256 tokens）
+  transformer_size: 16
   topk_match: 50
   sinkhorn_iters: 10
   ffn_dim: 256
@@ -20,7 +21,7 @@ model:
   pretrained_backbone: true
 
 training:
-  epochs: 3      # ← 试跑
+  epochs: 3
   lr: 0.0001
   weight_decay: 0.0001
   scheduler: 'cosine'

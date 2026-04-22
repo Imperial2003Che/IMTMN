@@ -15,11 +15,9 @@ datasets/
 checkpoints/*.pth
 checkpoints/*.pt
 
-# Logs & outputs (keep structure, ignore content)
-logs/*.json
-logs/*.txt
-outputs/*.png
-outputs/*.jpg
+# Logs & outputs
+logs/
+outputs/
 
 # Jupyter
 .ipynb_checkpoints/

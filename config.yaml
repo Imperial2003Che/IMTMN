@@ -4,41 +4,53 @@ data:
     - 'University-1652'
     - 'SUES-200'
   image_size: 256
-  batch_size: 2
-  num_workers: 0
+  batch_size: 8
+  num_workers: 4
+  dataset_settings:
+    University-1652:
+      train_ratio: 0.85
+      val_ratio: 0.15
+      ground_sources: ['street', 'google']
+      train_uav_samples_per_class: 16
+      val_uav_samples_per_class: 16
+      val_queries_per_class: 8
+      val_ground_queries_per_class: 4
+    SUES-200:
+      train_ratio: 0.70
+      val_ratio: 0.15
+      train_uav_samples_per_class: 16
+      val_uav_samples_per_class: 16
+      val_queries_per_class: 8
 
-# IMTMN (Improved Multi-View Transformer Matching Network) 配置
 model:
   arch: 'imtmn'
-  d_model: 256           # 特征维度
-  num_heads: 8            # 注意力头数
-  num_layers: 4           # Transformer 层数
-  topk_attn: 64           # 稀疏注意力 Top-k (创新2)
-  use_sparse: true        # 是否启用稀疏 Cross-Attention
-  transformer_size: 32    # Transformer 内部特征图尺寸 (32→32×32=1024 tokens, 防OOM)
-  topk_match: 200         # 匹配输出 Top-k 点数
-  sinkhorn_iters: 50      # Sinkhorn 迭代次数
-  ffn_dim: 1024           # FFN 中间维度
+  d_model: 256
+  num_heads: 8
+  num_layers: 4
+  topk_attn: 64
+  use_sparse: true
+  transformer_size: 32
+  topk_match: 200
+  sinkhorn_iters: 50
+  ffn_dim: 1024
   dropout: 0.1
-  pretrained_backbone: true  # 是否使用预训练 ResNet50
-  num_views: 3
+  pretrained_backbone: true
 
 training:
-  epochs: 50
-  lr: 0.0001
+  epochs: 60
+  lr: 0.0003
   weight_decay: 0.0001
-  warmup_epochs: 5
   scheduler: 'cosine'
-  use_amp: false
-  scheduler_params:
-    step_size: 10
-    gamma: 0.1
+  eta_min: 0.000001
+  warmup_epochs: 5
+  grad_accum_steps: 2
+  use_amp: true
 
 loss:
-  match_weight: 1.0       # L_match 权重
-  geo_weight: 0.5         # L_geo 权重 (λ)
-  retrieval_weight: 0.5   # L_retrieval 权重
-  temperature: 0.07       # InfoNCE 温度
+  match_weight: 1.0
+  geo_weight: 0.5
+  retrieval_weight: 0.5
+  temperature: 0.07
 
 checkpoint:
   save_dir: './checkpoints'
@@ -48,18 +60,22 @@ checkpoint:
 
 output:
   output_dir: './outputs'
-  save_predictions: true
-  save_visualizations: true
+  save_predictions: false
+  save_visualizations: false
 
 evaluation:
-  val_interval: 1
+  val_interval: 3
+  batch_size: 8
+  retrieval_ks: [1, 5, 10]
+  run_retrieval_on_val: true
+  include_reverse: true
 
 logging:
   log_dir: './logs'
-  log_interval: 10
+  log_interval: 50
   tensorboard: true
 
 misc:
-  device: 'cpu'
+  device: 'auto'
   seed: 42
   debug: false
