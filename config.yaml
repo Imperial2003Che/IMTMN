@@ -3,48 +3,53 @@ data:
   datasets:
     - 'University-1652'
     - 'SUES-200'
-  image_size: 256
-  batch_size: 8
-  num_workers: 4
+  image_size: 96
+  batch_size: 1
+  num_workers: 0
   dataset_settings:
     University-1652:
-      train_ratio: 0.85
-      val_ratio: 0.15
-      ground_sources: ['street', 'google']
-      train_uav_samples_per_class: 16
-      val_uav_samples_per_class: 16
-      val_queries_per_class: 8
-      val_ground_queries_per_class: 4
+      train_ratio: 0.05
+      val_ratio: 0.02
+      max_train_classes: 16
+      max_val_classes: 8
+      max_test_classes: 16
+      train_uav_samples_per_class: 2
+      val_uav_samples_per_class: 2
+      val_queries_per_class: 2
+      val_ground_queries_per_class: 1
     SUES-200:
-      train_ratio: 0.70
-      val_ratio: 0.15
-      train_uav_samples_per_class: 16
-      val_uav_samples_per_class: 16
-      val_queries_per_class: 8
+      train_ratio: 0.10
+      val_ratio: 0.05
+      max_train_classes: 10
+      max_val_classes: 6
+      max_test_classes: 10
+      train_uav_samples_per_class: 4
+      val_uav_samples_per_class: 4
+      val_queries_per_class: 4
 
 model:
   arch: 'imtmn'
-  d_model: 256
-  num_heads: 8
-  num_layers: 4
-  topk_attn: 64
+  d_model: 64
+  num_heads: 4
+  num_layers: 1
+  topk_attn: 8
   use_sparse: true
-  transformer_size: 32
-  topk_match: 200
-  sinkhorn_iters: 50
-  ffn_dim: 1024
+  transformer_size: 8
+  topk_match: 20
+  sinkhorn_iters: 5
+  ffn_dim: 128
   dropout: 0.1
   pretrained_backbone: true
 
 training:
-  epochs: 60
-  lr: 0.0003
+  epochs: 5
+  lr: 0.0001
   weight_decay: 0.0001
   scheduler: 'cosine'
   eta_min: 0.000001
-  warmup_epochs: 5
-  grad_accum_steps: 2
-  use_amp: true
+  warmup_epochs: 0
+  grad_accum_steps: 4
+  use_amp: false
 
 loss:
   match_weight: 1.0
@@ -54,7 +59,7 @@ loss:
 
 checkpoint:
   save_dir: './checkpoints'
-  save_interval: 5
+  save_interval: 1
   save_best: true
   resume: null
 
@@ -64,18 +69,18 @@ output:
   save_visualizations: false
 
 evaluation:
-  val_interval: 3
-  batch_size: 8
+  val_interval: 1
+  batch_size: 1
   retrieval_ks: [1, 5, 10]
   run_retrieval_on_val: true
   include_reverse: true
 
 logging:
   log_dir: './logs'
-  log_interval: 50
-  tensorboard: true
+  log_interval: 10
+  tensorboard: false
 
 misc:
-  device: 'auto'
+  device: 'cpu'
   seed: 42
-  debug: false
+  debug: true

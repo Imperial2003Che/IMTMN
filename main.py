@@ -14,7 +14,7 @@ from torch.utils.data import DataLoader
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from data.sues_dataset import CombinedDataset, build_retrieval_benchmarks
+from data.datasets import CombinedDataset, build_retrieval_benchmarks
 from data.transforms import get_train_transforms, get_eval_transforms
 from src.train import train_epoch, custom_collate_fn
 from src.eval import evaluate

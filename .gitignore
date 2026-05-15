@@ -7,17 +7,22 @@ __pycache__/
 *.pyo
 *.egg-info/
 .env
+.venv/
 venv/
+*.tmp
+*.bak
+*.old
 
 # Data & large files
-data/
-datasets/
-checkpoints/*.pth
-checkpoints/*.pt
+datasets/*
+!datasets/.gitkeep
+checkpoints/*
+!checkpoints/.gitkeep
+checkpoints_*/
 
-# Logs & outputs
+# Logs
 logs/
-outputs/
+logs_*/
 
 # Jupyter
 .ipynb_checkpoints/

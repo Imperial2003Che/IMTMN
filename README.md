@@ -70,11 +70,10 @@ $$\mathcal{L} = w_1 \cdot \mathcal{L}_{match} + w_2 \cdot \mathcal{L}_{geo} + w_
 project/
 ├── main.py                     # 训练/评估入口
 ├── config.yaml                 # 完整模型训练配置
-├── config_lite.yaml            # 轻量配置（CPU调试用）
-├── visualize.py                # 训练曲线和结果可视化
+├── requirements.txt            # Python依赖
 │
 ├── data/
-│   ├── sues_dataset.py         # 数据集加载与划分
+│   ├── datasets.py             # 数据集加载与划分
 │   └── transforms.py           # 数据增强
 │
 ├── src/
@@ -89,9 +88,22 @@ project/
 │       ├── transformer.py      # 多视角Transformer（含几何注意力）
 │       └── matcher.py          # 相似度矩阵 + Sinkhorn匹配
 │
+├── checkpoints/
+│   └── .gitkeep                # 本地模型权重目录，权重文件不提交到GitHub
+│
+├── outputs/                    # 最终展示结果
+│   ├── demos/                  # 训练曲线、匹配示例、总览图
+│   │   ├── matching_examples/
+│   │   └── similarity_examples/
+│   ├── figures/                # 论文展示图，只保留PNG最终版
+│   │   ├── advanced/
+│   │   ├── introduction/
+│   │   ├── scientific/
+│   │   └── theory/
+│   └── metrics/                # 评估指标JSON
+│
 └── datasets/                   # 数据集（需自行下载放置）
-    ├── University-1652/
-    └── SUES-200/
+    └── .gitkeep
 ```
 
 ## 使用的数据集
@@ -101,11 +113,12 @@ project/
 | [University-1652](https://github.com/layumi/University1652-Baseline) | UAV / 卫星 / 地面 | 1652栋建筑，72所大学 | Zheng et al., ACM MM 2020 |
 | [SUES-200](https://github.com/Reza-Zhu/SUES-200-Benchmark) | UAV / 卫星 | 200个场景，多飞行高度 | Zhu et al., 2023 |
 
+数据集和模型权重体积较大，GitHub仓库只保留目录占位。运行训练、评估或推理前，请将数据集放入 `datasets/`，将模型权重放入 `checkpoints/`。
+
 ## 环境配置
 
 ```bash
-pip install torch torchvision
-pip install opencv-python pillow matplotlib pyyaml tqdm tensorboard
+pip install -r requirements.txt
 ```
 
 ## 训练
@@ -117,24 +130,22 @@ python main.py
 # 指定配置文件
 python main.py --config config.yaml
 
-# CPU轻量调试
-python main.py --config config_lite.yaml
 ```
 
 主要训练参数（config.yaml）：
 
 | 参数 | 值 | 说明 |
 |------|-----|------|
-| d_model | 256 | 特征维度 |
-| num_heads | 8 | 注意力头数 |
-| num_layers | 4 | Transformer层数 |
-| transformer_size | 32 | 内部特征图尺寸（32×32=1024 tokens） |
-| sinkhorn_iters | 50 | Sinkhorn迭代次数 |
-| epochs | 60 | 训练轮次 |
-| lr | 3e-4 | 学习率（backbone用0.1×） |
-| warmup_epochs | 5 | 学习率预热 |
-| batch_size | 8 | 批大小 |
-| grad_accum_steps | 2 | 梯度累积步数（等效batch=16） |
+| d_model | 64 | 特征维度 |
+| num_heads | 4 | 注意力头数 |
+| num_layers | 1 | Transformer层数 |
+| transformer_size | 8 | 内部特征图尺寸（8×8=64 tokens） |
+| sinkhorn_iters | 5 | Sinkhorn迭代次数 |
+| epochs | 5 | 训练轮次 |
+| lr | 1e-4 | 学习率 |
+| warmup_epochs | 0 | 学习率预热 |
+| batch_size | 1 | 批大小 |
+| grad_accum_steps | 4 | 梯度累积步数 |
 
 ## 评估
 
@@ -162,8 +173,9 @@ python -m src.inference \
   --checkpoint checkpoints/best_model.pth \
   --output outputs/match_result.png
 
-# 查看训练曲线（自动找最新的日志）
-python visualize.py
+# 最终展示图
+# outputs/demos/
+# outputs/figures/
 ```
 
 ## 参考文献

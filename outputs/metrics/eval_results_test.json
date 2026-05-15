@@ -1,0 +1,87 @@
+{
+  "split": "test",
+  "retrieval": {
+    "University-1652_uav_to_sat_test": {
+      "Recall@1": 37.5,
+      "mAP": 50.491930125281215,
+      "MRR": 50.491929945054935,
+      "Median_Rank": 2.0,
+      "Mean_Positive_Rank": 5.6875,
+      "Mean_Positives_Per_Query": 1.0,
+      "Num_Queries": 16,
+      "Num_Gallery": 16,
+      "Num_Classes": 16,
+      "Recall@5": 62.5,
+      "Recall@10": 75.0
+    },
+    "University-1652_sat_to_uav_test": {
+      "Recall@1": 31.25,
+      "mAP": 53.8194446824491,
+      "MRR": 53.81944444444444,
+      "Median_Rank": 2.0,
+      "Mean_Positive_Rank": 3.3125,
+      "Mean_Positives_Per_Query": 1.0,
+      "Num_Queries": 16,
+      "Num_Gallery": 16,
+      "Num_Classes": 16,
+      "Recall@5": 81.25,
+      "Recall@10": 93.75
+    },
+    "University-1652_ground_to_sat_test": {
+      "Recall@1": 7.142857142857142,
+      "mAP": 27.057387466941563,
+      "MRR": 27.05738705738706,
+      "Median_Rank": 5.0,
+      "Mean_Positive_Rank": 6.285714285714286,
+      "Mean_Positives_Per_Query": 1.0,
+      "Num_Queries": 14,
+      "Num_Gallery": 16,
+      "Num_Classes": 16,
+      "Recall@5": 50.0,
+      "Recall@10": 78.57142857142857
+    },
+    "SUES-200_uav_to_sat_test": {
+      "Recall@1": 30.0,
+      "mAP": 46.60714313387871,
+      "MRR": 46.60714285714286,
+      "Median_Rank": 3.0,
+      "Mean_Positive_Rank": 4.0,
+      "Mean_Positives_Per_Query": 1.0,
+      "Num_Queries": 10,
+      "Num_Gallery": 10,
+      "Num_Classes": 10,
+      "Recall@5": 60.0,
+      "Recall@10": 100.0
+    },
+    "SUES-200_sat_to_uav_test": {
+      "Recall@1": 30.0,
+      "mAP": 44.59523841738701,
+      "MRR": 44.5952380952381,
+      "Median_Rank": 3.0,
+      "Mean_Positive_Rank": 4.2,
+      "Mean_Positives_Per_Query": 1.0,
+      "Num_Queries": 10,
+      "Num_Gallery": 10,
+      "Num_Classes": 10,
+      "Recall@5": 70.0,
+      "Recall@10": 100.0
+    }
+  },
+  "matching": {
+    "loss": 7.798203567663829,
+    "match_loss": 7.600038435724047,
+    "geo_loss": 0.3963303108078738,
+    "retrieval_loss": 0.0,
+    "avg_match_score": 0.0005091176470967992,
+    "avg_matches_per_pair": 20.0
+  },
+  "summary": {
+    "macro_recall_at_1": 27.178571428571427,
+    "macro_recall_at_5": 64.75,
+    "macro_recall_at_10": 89.46428571428571,
+    "macro_map": 44.514228765187525,
+    "macro_mrr": 44.51422847985348,
+    "macro_median_rank": 3.0,
+    "num_benchmarks": 5
+  }
+}

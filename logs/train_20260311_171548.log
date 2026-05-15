@@ -1,3 +1,0 @@
-2026-03-11 17:15:48,733 - INFO - TensorBoard 日志目录: ./logs/tb_20260311_171548
-2026-03-11 17:15:48,733 - INFO - 日志文件: ./logs/train_20260311_171548.log
-2026-03-11 17:15:48,734 - INFO - IMTMN Model Parameters: 16,241,557 total, 16,241,557 trainable

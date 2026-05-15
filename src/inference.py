@@ -77,7 +77,7 @@ def main():
     img2_tensor, img2_cv = preprocess_image(args.img2, args.img_size)
     matches, scores, sim_matrix = run_inference(model, img1_tensor, img2_tensor, device, args.topk)
 
-    feat_h = feat_w = args.img_size // 4
+    feat_h = feat_w = config['model'].get('transformer_size', args.img_size // 4)
     print(f"Found {len(matches)} matches, score range: [{scores.min():.4f}, {scores.max():.4f}]")
 
     os.makedirs(os.path.dirname(args.output) or '.', exist_ok=True)

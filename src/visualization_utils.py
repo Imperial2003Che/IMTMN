@@ -22,12 +22,12 @@ def draw_matches_cv2(img1_cv, img2_cv, matches, scores, feat_h, feat_w,
         flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
 
 
-def similarity_heatmap(sim_matrix):
+def similarity_heatmap(sim_matrix, output_size=512):
     """相似度矩阵热力图"""
     sim_min, sim_max = sim_matrix.min(), sim_matrix.max()
     if sim_max - sim_min > 1e-8:
         sim_norm = ((sim_matrix - sim_min) / (sim_max - sim_min) * 255).astype(np.uint8)
     else:
         sim_norm = np.zeros_like(sim_matrix, dtype=np.uint8)
-    size = min(512, sim_norm.shape[0])
+    size = max(sim_norm.shape[0], output_size)
     return cv2.applyColorMap(cv2.resize(sim_norm, (size, size), interpolation=cv2.INTER_NEAREST), cv2.COLORMAP_JET)
